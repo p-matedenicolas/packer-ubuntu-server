@@ -1,0 +1,33 @@
+#cloud-config
+autoinstall:
+  apt:
+    geoip: true
+    preserve_sources_list: false
+    primary:
+    - arches: [amd64, i386]
+      uri: http://es.archive.ubuntu.com/ubuntu
+    - arches: [default]
+      uri: http://ports.ubuntu.com/ubuntu-ports
+  identity: {
+    hostname: ubuntu,
+    password: $6$FGi1VEtimz9/vL3r$qWW6hEN.NZP/v1BijS1pEM.7pACxKsmCdKXVF0OTmDzE.egsYVKpciKjEccspn1Hw/ErsorqwV3ydqZBmzeea.,
+    realname: ubuntu,
+    username: ubuntu
+  }
+  keyboard: {layout: us, toggle: null, variant: ''}
+  locale: en_US.UTF-8
+  network:
+    ethernets:
+      enp0s17: {dhcp4: true}
+    version: 2
+  ssh:
+    allow-pw: true
+    authorized-keys: []
+    install-server: true
+  storage:
+    layout:
+        name: lvm
+  updates: security
+  version: 1
+  late-commands:
+    - echo 'ubuntu ALL=(ALL) NOPASSWD:ALL' > /target/etc/sudoers.d/ubuntu

@@ -1,0 +1,12 @@
+
+ssh_username = "[vm_username]"
+ssh_password = "[vm_password]"
+
+ubuntu_iso_local    = "iso/ubuntu-22.04.1-live-server-amd64.iso"
+ubuntu_iso_link     = "https://releases.ubuntu.com/22.04.1/ubuntu-22.04.1-live-server-amd64.iso"
+ubuntu_iso_checksum = "10f19c5b2b8d6db711582e0e27f5116296c34fe4b313ba45f9b201a5007056cb"
+
+vagrant_cloud_access_token        = "access_token"
+vagrant_cloud_box_tag             = "[vagrant_cloud_user]/[ubuntu-server]"
+vagrant_cloud_version             = "22.04.1"
+vagrant_cloud_version_description = "Ubuntu server 22.04.1 minimal install"

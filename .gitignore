@@ -1,0 +1,19 @@
+### Packer ###
+# cache objects
+packer_cache/
+
+# crash log
+crash.log
+
+# for built boxes
+*.box
+
+# temporary output files
+output-*/
+
+# pkrvars files
+*.pkrvars.hcl
+
+# iso
+iso/
+*.iso
